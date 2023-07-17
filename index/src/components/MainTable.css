@@ -1,0 +1,27 @@
+.MainTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.MainTable th,
+.MainTable td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.MainTable th {
+    background-color: #f2f2f2;
+  }
+  
+  .MainTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .MainTable tbody tr:hover {
+    background-color: #e9e9e9;
+  }
+  
+  .MainTable td:first-child {
+    font-weight: bold;
+  }

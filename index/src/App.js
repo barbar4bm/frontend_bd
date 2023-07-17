@@ -1,11 +1,18 @@
 import React from 'react'
-
+import MainTable from './components/MainTable';
 import Header from './template/Header';
+import './App.css'
 
-const App = () => {
+
+function App() {
     return (
-        <Header></Header>
-    )
+        <div className='header-container'>
+            <Header/>
+            <div className='table-container'>
+                <MainTable/>
+            </div>
+        </div>
+    );
 }
 
 export default App;
