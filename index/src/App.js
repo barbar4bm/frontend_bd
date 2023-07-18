@@ -1,10 +1,9 @@
 import React from 'react'
-
-import Header from './template/Header';
+import SensorValues from './components/SensorValues';
 
 const App = () => {
     return (
-        <Header></Header>
+        <SensorValues/>
     )
 }
 
