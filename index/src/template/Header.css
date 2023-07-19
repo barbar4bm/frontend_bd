@@ -1,0 +1,12 @@
+.Header{
+    width: auto;
+    background-color: sandybrown;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.title{
+    font-size: 30px;
+    font-family: Impact;
+}
