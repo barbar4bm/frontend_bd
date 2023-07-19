@@ -1,7 +1,19 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { FaTemperatureLow } from 'react-icons/fa'
 
-const ContainerRectangle = () => {
+const ContainerRectangle = (props) => {
+    const containerN = props.containerN;
+
+    const [items, setitems] = useState(null);
+
+    useEffect(() =>{
+        axios.get('http://localhost:3001/api/items')
+        .then((res) => setitems(res.data.items));
+    }, []);
+
+    if(items === null) return <div>Loading</div>;
+    
   return (
     <div style={{
         width: '300px',
@@ -17,7 +29,7 @@ const ContainerRectangle = () => {
             }}
         >
             <FaTemperatureLow/>
-            T°
+            {items[containerN-1].temperature}°C
         </div>
         <div style={{
             position: 'absolute',
@@ -26,7 +38,7 @@ const ContainerRectangle = () => {
             }}
         >
             <FaTemperatureLow/>
-            T°
+            {items[containerN-1].temperature}°C
         </div>
         <div style={{
             position: 'absolute',
@@ -35,7 +47,7 @@ const ContainerRectangle = () => {
             }}
         >
             <FaTemperatureLow/>
-            T°
+            {items[containerN-1].temperature}°C
         </div>
         <div style={{
             position: 'absolute',
@@ -44,7 +56,7 @@ const ContainerRectangle = () => {
             }}
         >
             <FaTemperatureLow/>
-            T°
+            {items[containerN-1].temperature}°C
         </div>
         <div style={{
             position: 'absolute',
@@ -54,7 +66,7 @@ const ContainerRectangle = () => {
             }}
         >
             <FaTemperatureLow/>
-            T°
+            {items[containerN-1].temperature}°C
         </div>
     </div>
   )

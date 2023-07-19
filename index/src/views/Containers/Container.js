@@ -1,7 +1,8 @@
 import React from 'react'
-import ContainerRectangle from '../components/ContainerRectangle'
-import Header from '../template/Header'
+import ContainerRectangle from '../../components/ContainerRectangle'
+import Header from '../../template/Header'
 import { Link } from 'react-router-dom'
+import { FaArrowLeft } from 'react-icons/fa';
 
 const Container = () => {
   return (
@@ -9,11 +10,14 @@ const Container = () => {
         <Header/>
         <div style={{marginBlock:'20px'}}>
           <Link to='/'>
-            <button>volver</button>
+            <button>
+              <FaArrowLeft/>
+            </button>
           </Link>
         </div>
+        <h1>CONTAINER 1</h1>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop:'60px' }}>
-              <ContainerRectangle/>
+              <ContainerRectangle containerN='1'/>
         </div>
     </div>
   )
