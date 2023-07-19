@@ -1,5 +1,7 @@
 import React from 'react';
 import './MainTable.css'
+import { Link } from 'react-router-dom';
+import { FaChartLine } from 'react-icons/fa'
 
 const MainTable = () => {
   return (
@@ -12,6 +14,7 @@ const MainTable = () => {
         <th scope="col"> Sensor 3</th>
         <th scope="col"> Sensor 4</th>
         <th scope="col"> Sensor 5</th>
+        <th scope="col"> Chart</th>
         </tr>
       </thead>
       <tbody>
@@ -22,6 +25,13 @@ const MainTable = () => {
         <td>x</td>
         <td>x</td>
         <td>x</td>
+        <td> 
+          <Link to='/chart'>
+            <button>
+            <FaChartLine/>
+            </button>
+          </Link>
+        </td>
         </tr>
         <tr>
         <th scope="row">Container 2</th>
@@ -30,6 +40,13 @@ const MainTable = () => {
         <td>y</td>
         <td>y</td>
         <td>y</td>
+        <td> 
+          <Link to='/chart'>
+            <button>
+            <FaChartLine/>
+            </button>
+          </Link>
+        </td>
         </tr>
         <tr>
         <th scope="row">Container 3</th>
@@ -38,6 +55,13 @@ const MainTable = () => {
         <td>x</td>
         <td>x</td>
         <td>x</td>
+        <td> 
+          <Link to='/chart'>
+            <button>
+            <FaChartLine/>
+            </button>
+          </Link>
+        </td>
         </tr>
         <tr>
         <th scope="row">Container 4</th>
@@ -46,6 +70,13 @@ const MainTable = () => {
         <td>y</td>
         <td>y</td>
         <td>y</td>
+        <td> 
+          <Link to='/chart'>
+            <button>
+            <FaChartLine/>
+            </button>
+          </Link>
+        </td>
         </tr>
         <tr>
         <th scope="row">Container 5</th>
@@ -54,6 +85,13 @@ const MainTable = () => {
         <td>x</td>
         <td>x</td>
         <td>x</td>
+        <td> 
+          <Link to='/chart'>
+            <button>
+            <FaChartLine/>
+            </button>
+          </Link>
+        </td>
         </tr>
         <tr>
         <th scope="row">Container 6</th>
@@ -62,6 +100,13 @@ const MainTable = () => {
         <td>y</td>
         <td>y</td>
         <td>y</td>
+        <td> 
+          <Link to='/chart'>
+            <button>
+            <FaChartLine/>
+            </button>
+          </Link>
+        </td>
         </tr>
       </tbody>
     </table>
