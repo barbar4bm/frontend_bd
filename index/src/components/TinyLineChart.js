@@ -1,24 +1,22 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import {CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts'
 
-const data = [
-  { date: '2023-07-18 08:00', temperature: 25 },
-  { date: '2023-07-18 11:30', temperature: 29 },
-  { date: '2023-07-18 14:45', temperature: 31 },
-  { date: '2023-07-18 18:20', temperature: 40 },
-  { date: '2023-07-19 09:15', temperature: 24 },
-  { date: '2023-07-19 12:45', temperature: 21 },
-  { date: '2023-07-19 15:30', temperature: 13 },
-  { date: '2023-07-19 19:00', temperature: 21 },
-  { date: '2023-07-20 10:30', temperature: 4 },
-  { date: '2023-07-20 13:15', temperature: 12 }
-]
-
 const TinyLineChart = () => {
+
+    const [items, setitems] = useState(null);
+
+    useEffect(() =>{
+        axios.get('http://localhost:3001/api/items')
+        .then((res) => setitems(res.data.items));
+    }, []);
+
+    if(items === null) return <div>Loading</div>;
+
   return (
     <ResponsiveContainer width='100%' aspect={2}>
       <LineChart 
-        data={data}
+        data={items}
         width={250}
         height={200}
         margin={{
